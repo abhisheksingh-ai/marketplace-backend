@@ -7,8 +7,8 @@ import (
 	"github.com/gin-gonic/gin"
 	"github.com/joho/godotenv"
 
-	"github.com/abhisheksingh-ai/marketplace-backend/internal/handlers"
-	"github.com/abhisheksingh-ai/marketplace-backend/internal/utils"
+	"github.com/abhisheksingh-ai/marketplace-backend/internals/handlers"
+	"github.com/abhisheksingh-ai/marketplace-backend/internals/utils"
 )
 
 func main() {
