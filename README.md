@@ -1,8 +1,8 @@
-🚲 Marketplace Backend (Golang + MongoDB + RabbitMQ + Docker)
+## 🚲 Marketplace Backend (Golang + MongoDB + RabbitMQ + Docker)
 
 A microservices-style backend project built with Go (Golang), MongoDB for storage, RabbitMQ for asynchronous order processing, and fully containerized using Docker.
 
-✨ Features
+# ✨ Features
 
 REST APIs for User, Product, and Order management
 
@@ -16,7 +16,7 @@ Go Concurrency Patterns (Goroutines and Channels)
 
 Fully containerized (App, MongoDB, RabbitMQ) using Docker Compose
 
-🛆 Tech Stack
+# 🛆 Tech Stack
 
 Go (Golang)
 
@@ -28,7 +28,7 @@ RabbitMQ
 
 Docker & Docker Compose
 
-🚀 How to Run the Project
+# 🚀 How to Run the Project
 
 1. Clone the Repository
 
@@ -45,33 +45,15 @@ Backend API: http://localhost:8080
 
 RabbitMQ Management UI: http://localhost:15672Username: guest | Password: guest
 
-📚 Available API Endpoints
+# 📚 Available API Endpoints
 
-Method
+POST /users -> Create a new user
 
-Endpoint
+POST /products -> Create a new product 
 
-Description
+POST /orders  -> Place a new order (async queued)
 
-POST
-
-/users
-
-Create a new user
-
-POST
-
-/products
-
-Create a new product
-
-POST
-
-/orders
-
-Place a new order (async queued)
-
-⚙️ Environment Variables
+# ⚙️ Environment Variables
 
 (Already configured inside Docker Compose)
 
@@ -93,5 +75,3 @@ docker ps
 📌 Author
 
 GitHub: abhisheksingh-ai
-
-make it readMe.md 
