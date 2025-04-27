@@ -38,6 +38,6 @@ func CreateProduct(mongoClient *mongo.Client) gin.HandlerFunc {
 			return
 		}
 
-		c.JSON(http.StatusOK, gin.H{"message": "new producr added successfully"})
+		c.JSON(http.StatusOK, gin.H{"message": "New product added successfully"})
 	}
 }
