@@ -43,7 +43,7 @@ func ConnectRabbitMQ() (*amqp.Connection, *amqp.Channel, error) {
 func StartOrderConsumer(channel *amqp.Channel, mongoClient *mongo.Client) {
 	//ensure queue exists
 	queue, err := channel.QueueDeclare(
-		"order",
+		"orders",
 		true,
 		false,
 		false,
@@ -89,13 +89,13 @@ func StartOrderConsumer(channel *amqp.Channel, mongoClient *mongo.Client) {
 		}
 
 		//inserting into mongodb
-		ctx , cancel := context.WithTimeout(context.Background() , 10*time.Second)
+		ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
 		defer cancel()
 
 		_, err = orderCollection.InsertOne(ctx, order)
 
 		if err != nil {
-			log.Println("Error inserting order:", err);
+			log.Println("Error inserting order:", err)
 			continue
 		}
 

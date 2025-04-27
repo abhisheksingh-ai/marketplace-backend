@@ -42,7 +42,7 @@ func main() {
 	router := gin.Default()
 
 	// Register routes
-	// router.POST("/users", handlers.CreateUser(mongoClient))
+	router.POST("/users", handlers.CreateUser(mongoClient))
 	// router.POST("/products", handlers.CreateProduct(mongoClient))
 	router.POST("/orders", handlers.CreateOrder(mongoClient, rabbitChannel))
 
